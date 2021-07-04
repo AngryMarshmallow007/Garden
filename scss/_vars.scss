@@ -1,0 +1,18 @@
+$title: #363838;
+$default: #5A5A5A;
+$green: rgba(35, 121, 43, 0.7);
+
+
+%title-font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+@function max($numbers...) {   //миксин для ошибки fancybox (max)
+	@return m#{a}x(#{$numbers});
+  }
+  
+  @function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+  }

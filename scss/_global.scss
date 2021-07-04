@@ -1,0 +1,87 @@
+html,
+body {
+	height: 100%;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 27px;
+	font-weight: 400;
+	color: $default;
+	overflow-x: hidden;
+	// overflow-y: hidden; //!
+	min-width: 300px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid{ //для гигантских мониторов ? 
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.info-email{
+    font-weight: 600;
+    font-size: 14px;
+    color: $title;
+    margin-bottom: 22px;
+    padding-left: 30px;
+    display: inline-block;
+    position: relative;
+    &::before{
+        content: '';
+        background-image: url(../images/email.svg);
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 16px;
+        height: 12px;
+    }
+}
+
+.slick-dots{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	li{
+		margin: 0 15px;
+	}
+	button{
+		background-color: $title;
+		border: none;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		padding: 0;
+		font-size: 0;
+	}
+	li.slick-active{
+		button{
+			background-color: #FFEF35;
+		}
+	}
+}
+
+
+
+
+
