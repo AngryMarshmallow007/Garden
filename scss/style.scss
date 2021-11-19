@@ -18,6 +18,34 @@
     margin-left: 20px;
 }
 
+.dark-mode-toggle {
+    position: relative;
+    top: -11%;
+    width: 35px;
+    height: 35px;
+    background-color: $title;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        color: $default;
+    }
+}
+
+.dark-mode-toggle::before {
+    content: '\f186';   /* unicode */
+    font-family: fontAwesome;
+    color: $white;
+    font-size: 20px;
+}
+
+// .dark-mode-toggle.active::before {
+//     content: '\f185';   
+//     background-color: $yellow;
+// }
+
 .menu{
     padding-right: 10px;
     &__list{
@@ -29,7 +57,7 @@
     }
     &__list-link{
         @extend %title-font;
-        color: $green;
+        color: rgba($green, .7);
         line-height: 22px;
         transition: all .3s;
         &:hover{
@@ -52,9 +80,14 @@
     }
 }
 
+.nav-toggle{
+    display: none;
+}
+
+
 .footer{
     &__content{
-        background: rgba(35, 125, 43, 0.3);;
+        background: rgba($footer, .8);
         padding: 60px 0 80px;
     }
     &__inner{
@@ -89,13 +122,13 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 27px;
-            color: #A1A1A1;
+            color: rgba($default, .7);
         }
     }
     &__form-button{
         background-color: $title;
         border: none;
-        color: #fffff0;
+        color: $white;
         border-radius: 21px;
         font-weight: 600;
         padding: 6px 12px;
@@ -154,7 +187,7 @@
     }
     &__social-link,
     &__menu-link{
-        color: #707070;
+        color: $default;
     }
     &__menu{
         margin-right: 60px;
@@ -162,7 +195,7 @@
     }
     &__copyright{   
         background-color: $title;
-        color: #A1A1A1;
+        color: rgba($default, .7);
         text-align: center;
         padding: 42px 0 41px;
     }
@@ -213,7 +246,7 @@
             bottom: 0;
             height: 1px;
             width: 185px;
-            background: #6D7278;
+            background: $default;
         }
     }
     &__slider-text{
@@ -221,7 +254,7 @@
     }
 }
 .welcome{
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 80px;
     text-align: center;
     &__title{
@@ -244,7 +277,7 @@
         padding-right: 15px;
     }
     &__link{
-        color: #fff;
+        color: $white;
         max-width: 100%;
         padding: 10px 35px;
         background: $green;
@@ -273,7 +306,7 @@
     &__links{
         font-size: 14px;
         font-weight: 600;
-        color: #707070;
+        color: $default;
     }
     &__item-titlelink{
         color: $green;
@@ -293,10 +326,10 @@
     &__btn{
         margin: 0 8px;
         background-color: transparent;
-        border: 1px solid #454647;
+        border: 1px solid $border;
         border-radius: 20px;
         padding: 6px 16px;
-        color: #8F8D8D;
+        color: $default;
         font-size: 14px;
         font-weight: 600;
         cursor: pointer;
@@ -311,6 +344,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-gap: 25px 30px;
+        padding: 10px 0;
     }
     &__item:first-child{  //fisrt one always big (depends on layout)
         grid-column: span 2;
@@ -349,7 +383,7 @@
 }
 
 .breadcrumbs{
-    background: rgba(#DFDFDF, .5);
+    background: rgba($border-milk, .5);
     padding: 13px 14px;
     position: relative;
     z-index: 3;
@@ -390,7 +424,7 @@
     }
     &__prev-title{
         color: $title;
-        background: rgba(#DFDFDF, .5);
+        background: rgba($border-milk, .5);
         width: 300px;
         margin: 0 auto;
         @extend %title-font;
@@ -419,7 +453,7 @@
         }
     }
     &__text{
-        padding-left: 284px;
+        padding-left: 120px;
         p{
             margin-bottom: 30px;
         }
@@ -481,7 +515,7 @@
             content: '';
             position: absolute;
             height: 1px;
-            background: #6D7278;
+            background: $default;
             width: 80%;
             margin: 0 auto;
             bottom: 0;
@@ -492,7 +526,7 @@
     &__info-text{
         font-weight: 600;
         font-size: 14px;
-        color: #707070;
+        color: $default;
     }
 }
 
@@ -545,7 +579,7 @@
         margin-left: 80px;
     }
     &__form-input{
-        border: 1px solid #DFDFDF;
+        border: 1px solid $border-milk;
         padding: 6px 17px;
         margin-bottom: 13px;
         width: 100%;
@@ -557,7 +591,7 @@
     }
     &__form-area{
         width: 100%;
-        border: 1px solid #DFDFDF;
+        border: 1px solid $border-milk;
         padding: 10px 17px;
         min-height: 140px;
         resize: none;

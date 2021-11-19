@@ -14,6 +14,143 @@ body{
 	min-width: 300px;
 }
 
+.darkmode{
+	color: $white;
+	background-color: rgba($title, .9);
+	a{
+		color: $white;
+	}
+	.menu__list-link{
+        color: rgba($green2, .9);
+        &:hover{
+            color: rgba($yellow, .8);
+        }
+    }
+	.dark-mode-toggle {
+		background-color: $yellow;
+		&:hover{
+			color: $default;
+		}
+	}
+	.dark-mode-toggle::before {
+		content: '\f185';  
+		color: $title;
+	}
+	.slick-dots{
+		button{
+			background-color: $white;
+		}
+		li.slick-active{
+			button{
+				background-color: $yellow;
+			}
+		}
+	}
+	.top{
+		&__inner{
+			&::after{
+				content: '';
+				background-image: url(../images/slider-bg-dm.jpg);
+			}
+		}
+		&__slider-text{
+			color: $title;
+		}
+	}
+	.welcome{
+		&__title{
+			color: $white;
+		}
+		&__subtitle{ 
+			color: rgba($green2, .7);
+		}
+		&__link{
+			color: $white;
+			background: $green;
+			&:hover{
+				background-color: $yellow;
+				color: $default;
+			}
+		}
+	}
+	.products{
+		&__links{
+			color: rgba($green2, .7);
+		}
+		&__item-titlelink{
+			color: $green2;
+			&:hover{
+				color: $yellow;
+			}
+		}
+	}	
+	.gallery{
+		&__btn{
+			border: 1px solid $yellow;
+			color: $yellow;
+		}
+		.mixitup-control-active{
+			background-color: rgba($green2, .8);
+			border: 1px solid $green2;
+			color: $title;
+		}
+		&__link{
+			color: $white;
+			background: $green;
+			&:hover{
+				background-color: $yellow;
+				color: $title;
+			}
+		}
+	}
+	.footer{
+		&__content{
+			background: rgba($footer, .7);
+			padding: 60px 0 80px;
+		}
+		&__info-title{
+			color: $white;
+		}
+		&__form-input{
+			&::placeholder{
+				color: rgba($white, 1);
+			}
+		}
+		&__form-button{
+			background-color: $title;
+			border: none;
+			color: $white;
+		}
+		&__social-link,
+		&__menu-link{
+			color: $white;
+		}
+		&__copyright{   
+			background-color: $default;
+			color: rgba($title, .7);
+		}
+	}
+	.breadcrumbs{
+		&__link--active{
+			color: rgba($green2, .8);
+		}
+	}
+	.about{
+		&__title{
+			color: $white;
+			&::after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 200px;
+				height: 1px;
+				background-color: $yellow;
+			}
+		}
+	}
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -62,6 +199,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 20px;
 	li{
 		margin: 0 15px;
 	}
@@ -76,7 +214,7 @@ body{
 	}
 	li.slick-active{
 		button{
-			background-color: #FFEF35;
+			background-color: $yellow;
 		}
 	}
 }

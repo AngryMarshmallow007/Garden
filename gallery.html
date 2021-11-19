@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Garden</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
 
 <body>
   <div class="wrapper">
@@ -14,6 +17,13 @@
       <div class="container">
         <div class="header__inner">
           <nav class="menu">
+
+            <button class="nav-toggle">
+              <span class="bar-top"></span>
+              <span class="bar-mid"></span>
+              <span class="bar-bot"></span>
+            </button>
+
             <ul class="menu__list">
               <li class="menu__list-item">
                 <a class="menu__list-link" href="index.html">Home</a>
@@ -22,10 +32,13 @@
                 <a class="menu__list-link" href="about.html">About</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link menu__list-link--active" href="gallery.html">Gallery</a>
+                <a class="menu__list-link" href="gallery.html">Gallery</a>
               </li>
               <li class="menu__list-item">
                 <a class="menu__list-link" href="contacts.html">Contacts</a>
+              </li>
+              <li class="menu__list-item">
+                <span id="dark-mode-toggle" class="dark-mode-toggle"></span>
               </li>
             </ul>
           </nav>
@@ -41,7 +54,7 @@
         <div class="container">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="page.html">Home</a>
+              <a class="breadcrumbs__link" href="index.html">Home</a>
             </li>
             <li class="breadcrumbs__item">
               <a class="breadcrumbs__link breadcrumbs__link--active" href="gallery.html">Gallery</a>
